@@ -99,7 +99,7 @@ body.mode-creative .mode-label-cre{color:var(--cre-1);}
 
 /* hero */
 .hero{
-  min-height:100vh;position:relative;display:flex;align-items:center;
+  min-height:90vh;position:relative;display:flex;align-items:center;
   padding:8rem 6vw 4rem;overflow:hidden;
 }
 .hero-bg{position:absolute;inset:0;z-index:0;}
@@ -132,7 +132,7 @@ body.mode-creative .mode-label-cre{color:var(--cre-1);}
 .hero-ctas{display:flex;gap:1rem;flex-wrap:wrap;}
 .btn{
   display:inline-flex;align-items:center;gap:0.5rem;
-  padding:0.85rem 1.6rem;border-radius:10px;font-size:0.92rem;font-weight:600;
+  padding:0.7rem 1.2rem;border-radius:10px;font-size:0.92rem;font-weight:600;
   cursor:pointer;border:1px solid var(--panel-border);transition:all 0.3s;
 }
 .btn-primary{
@@ -456,46 +456,74 @@ footer{
   border-top:1px solid var(--panel-border);
 }
 
-@media(max-width:600px){
+@media(max-width:768px){
 
-  section{
-    padding:5rem 6vw;
+  /* Hide nav links on mobile */
+  .nav-links{
+      display:none;
   }
 
+  /* Hero section */
   .hero{
-    padding:7rem 6vw 3rem;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      padding:120px 25px 60px;
+      min-height:auto;
+      text-align:center;
   }
 
+  /* Move photo above */
   .profile-photo{
       position:relative;
-      width:170px;
-      height:170px;
-      margin:0 auto 30px auto;
+      width:140px;
+      height:140px;
+      margin-bottom:30px;
       top:0;
       right:0;
-      display:block;
+      left:0;
   }
 
+  /* Hide floating card */
+  .float-card{
+      display:none;
+  }
+
+  /* Hero text */
   .hero-content{
+      max-width:100%;
       text-align:center;
   }
 
   .hero h1{
-      font-size:3rem;
+      font-size:2.5rem;
       line-height:1.1;
   }
 
   .tagline{
-      font-size:18px;
-      text-align:center;
+      font-size:15px;
+      line-height:1.7;
+      margin:20px auto;
+      max-width:100%;
   }
 
+  .role-line{
+      font-size:15px;
+  }
+
+  /* Buttons stack vertically */
   .hero-ctas{
-      justify-content:center;
+      display:flex;
+      flex-direction:column;
+      width:100%;
+      gap:15px;
+      align-items:center;
   }
 
-  .float-card{
-      display:none;
+  .btn{
+      width:220px;
+      justify-content:center;
   }
 }
 
